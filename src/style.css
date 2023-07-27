@@ -1,0 +1,233 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 5px;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+
+html,body {
+    height: 100%;
+    width: 100%;
+    background-color: aqua;
+}
+
+#content {
+    border: 1px solid red;
+    display: grid;
+    justify-items: center;
+    height: 100%;
+    grid-template-rows: 80px 1fr;
+}
+
+.nav-container {
+    padding-top: 30px;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3,1fr);
+    width: 220px;
+    height: 50px;
+}
+
+.main-content {
+    height: 100%;
+    width: 100%;
+    background-color: yellowgreen;
+    border: 1px solid red;
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    overflow: auto;
+}
+
+.nav-btn {
+
+    width: 60px;
+    height: 30px;
+}
+
+.content-display {
+    width: 80%;
+    height: 100%;
+    border: 1px solid blue;
+    background-color: violet;
+    overflow: auto;
+    display: grid;
+    
+
+}
+
+/* Home */
+
+.home-content {
+    display: grid;
+    row-gap: 10px;
+    align-self: center;
+    justify-self: center;
+    align-items: center;
+    justify-items: center;
+    width: min(100%, 400px);
+}
+
+.explore {
+    width: 90px;
+    height: 35px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+
+/* Menu */
+
+.menu-content {
+
+    display: grid;
+    row-gap: 30px;
+    padding-bottom: 30px;
+    /* grid-template-rows: repeat(); */
+    grid-template-columns: minmax(300px,500px);
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.menu-card {
+    display: grid;
+    height: 200px;
+    width: 100%;
+    border: 1px solid black;
+
+    justify-self: center;
+    justify-items: start;
+    align-items: center;
+    grid-template-rows: 1fr;
+    grid-auto-columns: 150px 1fr;
+    grid-template-areas: "food-img food-details";
+    column-gap: 20px;
+    padding: 20px;
+}
+
+
+.food-img {
+    border: 1px solid yellow;
+    height: 150px;
+    width: 150px;
+    grid-area: food-img;
+}
+
+.food-details {
+    width: max(150px,100%);
+    height: 150px;
+    border: 1px solid yellow;
+    grid-area: food-details;
+}
+
+
+/* CONTACT US */
+
+.details-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: start;
+    justify-items: center;
+    padding-top: 40px;
+    margin-bottom: 30px;
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid yellow;
+    background-color: #555;
+}
+
+.details {
+
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: 150px;
+}
+
+fieldset {
+    font-size: 30px;
+    padding: 20px;
+    border: none;
+}
+
+.form-container {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    row-gap: 10px;
+}
+
+.input-container {
+    height: 30px;
+    width: 300px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    
+
+}
+
+.input-container > input {
+    appearance: none;
+    border: 1px solid gray;
+    width: 300px;
+    height: 30px;
+    padding-left: 10px;
+}
+
+.text-container > textarea {
+    appearance: none;
+    border: 1px solid gray;
+    width: 300px;
+    height: 200px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.text-container {
+    height: 200px;
+}
+
+.submit-btn {
+    width: 300px;
+    height: 30px;
+}
+
+.footer {
+    height: 70px;
+    background-color: red;
+    width: 100%;
+    text-align: center;
+}
