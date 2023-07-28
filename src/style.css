@@ -214,6 +214,7 @@ fieldset {
     height: 200px;
     padding-left: 10px;
     padding-top: 10px;
+    resize: none;
 }
 
 .text-container {
