@@ -1,3 +1,5 @@
+import './style.css';
+
 import createMainBody from "./main-load";
 
 import createHomeElements from "./home";
