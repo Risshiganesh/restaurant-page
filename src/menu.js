@@ -1,16 +1,21 @@
+import menuitem1 from "./assets/menu-item1.jpg"
+import menuitem2 from "./assets/menu-item2.jpg"
+import menuitem3 from "./assets/menu-item3.jpg"
+import menuitem4 from "./assets/menu-item4.jpg"
+
 // Factory function for menu items
-function menuItemFactory(name,desc,price,img){
+function menuItemFactory(name,price,desc,img){
 
     return{name,desc,price,img};
 }
 
-const item1 = menuItemFactory('Burger','Absolutely Delicious','RM12.00','./item1');
+const item1 = menuItemFactory('Burger','RM12.00','Absolutely Delicious', menuitem1);
 
-const item2 = menuItemFactory('Burger','Absolutely Delicious','RM12.00','./item1');
+const item2 = menuItemFactory('Pizza','RM12.00','Absolutely Delicious', menuitem2);
 
-const item3 = menuItemFactory('Burger','Absolutely Delicious','RM12.00','./item1');
+const item3 = menuItemFactory('Grilled Chicken', 'RM12.00','Absolutely Delicious', menuitem3);
 
-const item4 = menuItemFactory('Burger','Absolutely Delicious','RM12.00','./item1');
+const item4 = menuItemFactory('Chicken Kebab','RM12.00', 'Absolutely Delicious', menuitem4);
 
 const menuArray = [item1,item2,item3,item4];
 
@@ -40,9 +45,30 @@ function createMenuElements(){
                 foodImgDiv.classList.add('food-img');
                 menuCard.appendChild(foodImgDiv);
 
+                    const menuImg = new Image();
+                    menuImg.src = menuArray[index].img;
+                    foodImgDiv.appendChild(menuImg);
+
                 const foodDetails = document.createElement('div');
                 foodDetails.classList.add('food-details');
                 menuCard.appendChild(foodDetails);
+
+                    const foodTitle = document.createElement('div');
+                    foodTitle.classList.add('food-title');
+                    foodTitle.textContent = menuArray[index].name;
+                    foodDetails.appendChild(foodTitle);
+
+                    const foodPrice = document.createElement('div');
+                    foodPrice.classList.add('food-price');
+                    foodPrice.textContent = menuArray[index].price;
+                    foodDetails.appendChild(foodPrice);
+
+                    const foodDesc = document.createElement('div');
+                    foodDesc.classList.add('food-desc');
+                    foodDesc.textContent = menuArray[index].desc;
+                    foodDetails.appendChild(foodDesc);
+
+                    
 
 
             

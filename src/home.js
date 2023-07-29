@@ -1,3 +1,4 @@
+import logo from "./assets/logo.png"
 
 import createMenuElements from "./menu";
 
@@ -12,6 +13,20 @@ function createHomeElements(){
 
     contentDisplayDiv.appendChild(homeContentDiv);
 
+        // home-logo
+
+        const homeLogoDiv = document.createElement('div');
+
+        homeLogoDiv.classList.add('home-logo-div');
+
+        homeContentDiv.appendChild(homeLogoDiv);
+
+            const homeLogo = new Image();
+
+            homeLogo.src = logo;
+
+            homeLogoDiv.appendChild(homeLogo);
+
         //home-header-div
         const homeHeaderDiv = document.createElement('div');
 
@@ -22,7 +37,7 @@ function createHomeElements(){
             //home-header-title 
             const homeHeader = document.createElement('h1');
 
-            homeHeader.textContent = "The Best Food";
+            homeHeader.textContent = "GrilledHaven & Co.";
 
             homeHeaderDiv.appendChild(homeHeader);
 

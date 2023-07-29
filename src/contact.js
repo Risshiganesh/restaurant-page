@@ -1,4 +1,27 @@
 
+import locationIcon from "./assets/location.png"
+
+import phoneIcon from "./assets/phone.png"
+
+import emailIcon from "./assets/email.png"
+
+
+function contactFactory (subject,detail,icon,link){
+
+    return{subject,detail,icon,link}
+}
+
+const location = contactFactory("Address:", "No. 54 Jalan Penerbit U1/43 Off Jalan Glenmarie Temasya Industrial Park Batu 3", locationIcon);
+
+const phoneNumber = contactFactory("Phone:", "+000000000", phoneIcon);
+
+const email = contactFactory("Email:","email@email.com", emailIcon);
+
+const contactArray = [location,phoneNumber,email];
+
+// const contactArray = [{subject:"Address:", detail:"No. 54 Jalan Penerbit U1/43 Off Jalan Glenmarie Temasya Industrial Park Batu 3"},{subject:"Phone:", detail:"+000000000"},{subject:"Email:",detail:"email@email.com"}]
+
+
 function createContactElements () {
 
     const contentDisplayDiv = document.querySelector('.content-display');
@@ -24,8 +47,8 @@ function createContactElements () {
                 detailsContainerDiv.classList.add('details-container');
                 contactFormDiv.appendChild(detailsContainerDiv);
 
-                const detailArray = [{subject:"Address:", detail:"No. 54 Jalan Penerbit U1/43 Off Jalan Glenmarie Temasya Industrial Park Batu 3"},{subject:"Phone:", detail:"+000000000"},{subject:"Email:",detail:"email@email.com"}]
-
+                
+                // Contact details
                 for (let index = 0; index < 3; index++) {
                     
                     const detailsDiv = document.createElement('div');
@@ -37,9 +60,13 @@ function createContactElements () {
                         contactIconDiv.classList.add('contact-icon');
                         detailsDiv.appendChild(contactIconDiv);
 
+                            const detailIcon = new Image();
+                            detailIcon.src = contactArray[index].icon;
+                            contactIconDiv.appendChild(detailIcon);
+
                         const contactSubjectDiv = document.createElement('div');
                         contactSubjectDiv.classList.add('contact-subject');
-                        contactSubjectDiv.textContent = detailArray[index].subject;
+                        contactSubjectDiv.textContent = contactArray[index].subject;
                         detailsDiv.appendChild(contactSubjectDiv);
 
                         const contactDetailDiv = document.createElement('div');
@@ -48,11 +75,12 @@ function createContactElements () {
 
                             const detailLink = document.createElement('a');
                             detailLink.setAttribute('href','')
-                            detailLink.textContent = detailArray[index].detail;
+                            detailLink.textContent = contactArray[index].detail;
                             contactDetailDiv.appendChild(detailLink);
                     
                 }
             
+            // Contact form 
             const form = document.createElement('form');
             contactContentDiv.appendChild(form);
                 
