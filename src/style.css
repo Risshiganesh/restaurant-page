@@ -48,6 +48,12 @@ html,body {
     background-size: cover;
 }
 
+.logo-container {
+    border: 1px solid black;
+    /* height: 10px; */
+}
+
+
 .nav-container {
     padding-top: 30px;
     display: grid;
@@ -75,34 +81,64 @@ html,body {
 }
 
 .content-display {
-    width: 80%;
+    width: 100%;
     height: 100%;
     border: 1px solid blue;
     /* background-color: violet; */
     overflow: auto;
     display: grid;
+    /* position: relative; */
     
-
 }
+
+/* .content-display > video {
+    position: relative;
+
+    right: 0;
+    bottom: 0;
+
+} */
+
 
 /* Home */
 
 .home-content {
     display: grid;
-    row-gap: 10px;
+    /* row-gap: 10px; */
     align-self: center;
     justify-self: center;
     align-items: center;
     justify-items: center;
     width: min(100%, 400px);
+    position: absolute;
+    /* background-color: #555; */
+    padding: 30px;
+    border-radius: 50px 0px;
 }
 
-.home-logo-div {
+/* .home-logo-div {
     width: 100px;
+    display: grid;
+    align-items: end;
 }
 
 .home-logo-div > img {
     width: 100%;
+} */
+
+.home-header {
+    border-top: 5px solid black;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.home-header > h1 {
+    color: black;
+}
+
+.home-info {
+    margin-bottom: 15px;
+    width: 200px;
 }
 
 .explore {

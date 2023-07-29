@@ -14,9 +14,27 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(mp4|png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
+      {
+        test: /\.html$/,
+        use: {
+          loader: "html-loader",
+          options: {
+            attrs: [":src"]
+          }
+        }
+      },
+      // {
+      //   test: /\.(mp4|svg|png|jpe?g|gif)$/,
+      //   use: {
+      //     loader: "file-loader",
+      //     options: {
+      //       name: "[name].[hash].[ext]"
+      //     }
+      //   }
+      // }
     ],
   },
 };

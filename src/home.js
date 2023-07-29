@@ -1,79 +1,96 @@
 import logo from "./assets/logo.png"
 
+// import homeVideo from "./assets/home-video.mp4"
+
 import createMenuElements from "./menu";
+
 
 function createHomeElements(){
 
     const contentDisplayDiv = document.querySelector('.content-display');
 
-    // home-content
-    const homeContentDiv = document.createElement('div');
 
-    homeContentDiv.classList.add('home-content');
+        // const bgVideo = document.createElement('video');
+        // bgVideo.setAttribute('id','bg-video');
+        // bgVideo.setAttribute('autoplay','');
+        // bgVideo.setAttribute('loop','');
+        // bgVideo.setAttribute('muted','');
+        // bgVideo.setAttribute('poster','');
+        // contentDisplayDiv.appendChild(bgVideo);
 
-    contentDisplayDiv.appendChild(homeContentDiv);
+        //     const videoSource = document.createElement('source');
+        //     bgVideo.setAttribute('src',homeVideo);
+        //     bgVideo.appendChild(videoSource);
 
-        // home-logo
 
-        const homeLogoDiv = document.createElement('div');
+        // home-content
+        const homeContentDiv = document.createElement('div');
 
-        homeLogoDiv.classList.add('home-logo-div');
+        homeContentDiv.classList.add('home-content');
 
-        homeContentDiv.appendChild(homeLogoDiv);
+        contentDisplayDiv.appendChild(homeContentDiv);
 
-            const homeLogo = new Image();
+            // home-logo
 
-            homeLogo.src = logo;
+            const homeLogoDiv = document.createElement('div');
 
-            homeLogoDiv.appendChild(homeLogo);
+            homeLogoDiv.classList.add('home-logo-div');
 
-        //home-header-div
-        const homeHeaderDiv = document.createElement('div');
+            homeContentDiv.appendChild(homeLogoDiv);
 
-        homeHeaderDiv.classList.add('home-header');
+                const homeLogo = new Image();
 
-        homeContentDiv.appendChild(homeHeaderDiv);
+                homeLogo.src = logo;
 
-            //home-header-title 
-            const homeHeader = document.createElement('h1');
+                homeLogoDiv.appendChild(homeLogo);
 
-            homeHeader.textContent = "GrilledHaven & Co.";
+            //home-header-div
+            const homeHeaderDiv = document.createElement('div');
 
-            homeHeaderDiv.appendChild(homeHeader);
+            homeHeaderDiv.classList.add('home-header');
 
-        //home-info
-        const homeInfoDiv = document.createElement('div');
+            homeContentDiv.appendChild(homeHeaderDiv);
 
-        homeInfoDiv.classList.add('home-info');
+                //home-header-title 
+                const homeHeader = document.createElement('h1');
 
-        homeContentDiv.appendChild(homeInfoDiv);
+                homeHeader.textContent = "GrilledHaven & Co.";
 
-            const homeParagraph = document.createElement('p');
+                homeHeaderDiv.appendChild(homeHeader);
 
-            homeParagraph.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.";
+            //home-info
+            const homeInfoDiv = document.createElement('div');
 
-            homeInfoDiv.appendChild(homeParagraph);
-        
-        // Button
-        const homeButton = document.createElement('button');
+            homeInfoDiv.classList.add('home-info');
 
-        homeButton.classList.add('explore');
+            homeContentDiv.appendChild(homeInfoDiv);
 
-        homeButton.textContent = 'Explore';
+                const homeParagraph = document.createElement('p');
 
-        homeContentDiv.appendChild(homeButton);
+                homeParagraph.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.";
 
-        homeButton.addEventListener('click', function(){
+                homeInfoDiv.appendChild(homeParagraph);
             
-            const firstChild = contentDisplayDiv.firstChild;
+            // Button
+            const homeButton = document.createElement('button');
 
-            if(firstChild){
-                firstChild.remove();
+            homeButton.classList.add('explore');
+
+            homeButton.textContent = 'Explore';
+
+            homeContentDiv.appendChild(homeButton);
+
+            homeButton.addEventListener('click', function(){
                 
-            }
+                const firstChild = contentDisplayDiv.firstChild;
 
-            createMenuElements();
-        })
+                if(firstChild){
+                    firstChild.remove();
+                    
+                }
+
+                createMenuElements();
+            })
 
 }
 

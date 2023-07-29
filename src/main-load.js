@@ -1,6 +1,10 @@
+import logo from "./assets/logo.png"
+
 function createMainBody (){
 
     const contentDiv = document.querySelector('#content');
+
+    
 
     //Create nav container and main container
 
@@ -9,6 +13,25 @@ function createMainBody (){
     navContainer.classList.add('nav-container');
 
     contentDiv.appendChild(navContainer);
+
+
+    // Create logo div 
+
+    // const logoContainer = document.createElement('div');
+
+    // logoContainer.classList.add('logo-container');
+
+    // navContainer.appendChild(logoContainer);
+
+    //     const logoDiv = document.createElement('div');
+
+    //     logoDiv.classList.add('logo-div');
+
+    //     logoContainer.appendChild(logoDiv);
+
+    //         const logoIcon = new Image();
+    //         logoIcon.src = logo;
+    //         logoDiv.appendChild(logoIcon);
 
     // Create and append nav buttons
 
