@@ -32,17 +32,17 @@ function createHomeElements(){
 
             // home-logo
 
-            const homeLogoDiv = document.createElement('div');
+            // const homeLogoDiv = document.createElement('div');
 
-            homeLogoDiv.classList.add('home-logo-div');
+            // homeLogoDiv.classList.add('home-logo-div');
 
-            homeContentDiv.appendChild(homeLogoDiv);
+            // homeContentDiv.appendChild(homeLogoDiv);
 
-                const homeLogo = new Image();
+            //     const homeLogo = new Image();
 
-                homeLogo.src = logo;
+            //     homeLogo.src = logo;
 
-                homeLogoDiv.appendChild(homeLogo);
+            //     homeLogoDiv.appendChild(homeLogo);
 
             //home-header-div
             const homeHeaderDiv = document.createElement('div');
@@ -54,7 +54,7 @@ function createHomeElements(){
                 //home-header-title 
                 const homeHeader = document.createElement('h1');
 
-                homeHeader.textContent = "GrilledHaven & Co.";
+                homeHeader.textContent = "An Ember-lit Oasis of Taste";
 
                 homeHeaderDiv.appendChild(homeHeader);
 
@@ -67,7 +67,7 @@ function createHomeElements(){
 
                 const homeParagraph = document.createElement('p');
 
-                homeParagraph.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.";
+                homeParagraph.textContent = "Nestled along the sun-kissed beach, our exclusive BBQ grill restaurant invites you to savor a symphony of flavors, crafted with passion and precision.";
 
                 homeInfoDiv.appendChild(homeParagraph);
             
@@ -81,8 +81,17 @@ function createHomeElements(){
             homeContentDiv.appendChild(homeButton);
 
             homeButton.addEventListener('click', function(){
-                
+
+                const navButtonNodes = document.querySelectorAll('.nav-btn');
+
+                navButtonNodes.forEach(button => {
+                    button.classList.remove('nav-btn-clicked')
+                });
+
+                navButtonNodes[1].classList.add('nav-btn-clicked'); //menu-button
+
                 const firstChild = contentDisplayDiv.firstChild;
+
 
                 if(firstChild){
                     firstChild.remove();

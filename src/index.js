@@ -16,8 +16,6 @@ createHomeElements();
 
 // createContactElements();
 
-// console.log('test-works!');
-
 // Stores all 
 const tabArrays = [createHomeElements, createMenuElements,createContactElements];
 
@@ -26,11 +24,19 @@ function switchTab () {
     
     const navButtonNodes = document.querySelectorAll('.nav-btn');
 
+    navButtonNodes[0].classList.add('nav-btn-clicked');
+
     for (let index = 0; index < navButtonNodes.length; index++) {
         // console.log('test');
         navButtonNodes[index].addEventListener('click', function(){
 
+            navButtonNodes.forEach(button => {
+                button.classList.remove('nav-btn-clicked')
+            });
+
             const contentDisplayDiv = document.querySelector('.content-display');
+
+            navButtonNodes[index].classList.add('nav-btn-clicked');
 
 
             // Clear the DOM Display first
@@ -40,10 +46,6 @@ function switchTab () {
                 firstChild.remove();
                 
             }
-            
-            // console.log(firstChild);
-
-            // console.log(tabArrays[index]);
 
             const updateDisplay = tabArrays[index];
 

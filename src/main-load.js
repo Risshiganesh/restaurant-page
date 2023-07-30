@@ -17,31 +17,48 @@ function createMainBody (){
 
     // Create logo div 
 
-    // const logoContainer = document.createElement('div');
+    const logoContainer = document.createElement('div');
 
-    // logoContainer.classList.add('logo-container');
+    logoContainer.classList.add('logo-container');
 
-    // navContainer.appendChild(logoContainer);
+    navContainer.appendChild(logoContainer);
 
-    //     const logoDiv = document.createElement('div');
+        const logoDiv = document.createElement('div');
 
-    //     logoDiv.classList.add('logo-div');
+        logoDiv.classList.add('logo-div');
 
-    //     logoContainer.appendChild(logoDiv);
+        logoContainer.appendChild(logoDiv);
 
-    //         const logoIcon = new Image();
-    //         logoIcon.src = logo;
-    //         logoDiv.appendChild(logoIcon);
+            const logoIcon = new Image();
+            logoIcon.src = logo;
+            logoDiv.appendChild(logoIcon);
+
+        const brandNameDiv = document.createElement('div');
+
+        brandNameDiv.classList.add('brand-name');
+
+        brandNameDiv.textContent = "GrilledHaven & Co."
+
+        logoContainer.appendChild(brandNameDiv);
+
+
+
 
     // Create and append nav buttons
 
-    const buttonArray = ['Home','Menu','Contact'];
+    const navButtonDiv = document.createElement("div");
+
+    navButtonDiv.classList.add('nav-btn-div');
+
+    navContainer.appendChild(navButtonDiv);
+
+    const buttonArray = ['HOME','MENU','CONTACT'];
 
     buttonArray.forEach(element => {
         const navButton = document.createElement('button');
         navButton.textContent = element;
         navButton.classList.add('nav-btn')
-        navContainer.appendChild(navButton);
+        navButtonDiv.appendChild(navButton);
     });
 
     // Create and append main container to content div

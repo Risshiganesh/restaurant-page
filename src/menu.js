@@ -9,13 +9,13 @@ function menuItemFactory(name,price,desc,img){
     return{name,desc,price,img};
 }
 
-const item1 = menuItemFactory('Burger','RM12.00','Absolutely Delicious', menuitem1);
+const item1 = menuItemFactory('Chicken Burger','RM12.00','\"Unleash burger opulence. Pure indulgence awaits.\"', menuitem1);
 
-const item2 = menuItemFactory('Pizza','RM12.00','Absolutely Delicious', menuitem2);
+const item2 = menuItemFactory('Chicken Pizza','RM12.00','\"Experience pizza magnificence. Pure luxury in every slice.\"', menuitem2);
 
-const item3 = menuItemFactory('Grilled Chicken', 'RM12.00','Absolutely Delicious', menuitem3);
+const item3 = menuItemFactory('Grilled Chicken', 'RM12.00','\"Savor gourmet perfection. Elevate your senses with our luxury roast chicken.\"', menuitem3);
 
-const item4 = menuItemFactory('Chicken Kebab','RM12.00', 'Absolutely Delicious', menuitem4);
+const item4 = menuItemFactory('Chicken Kebab','RM12.00', "\"Unleash the kebab luxury. Succulent chicken, perfectly spiced, a taste like no other.\"", menuitem4);
 
 const menuArray = [item1,item2,item3,item4];
 

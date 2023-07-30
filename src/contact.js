@@ -82,6 +82,7 @@ function createContactElements () {
             
             // Contact form 
             const form = document.createElement('form');
+            form.setAttribute('id','contact-form');
             contactContentDiv.appendChild(form);
                 
                 const fieldset = document.createElement('fieldset');
@@ -108,7 +109,7 @@ function createContactElements () {
                         
                         const inputSubject = document.createElement('input');
                         inputSubject.setAttribute('type','text');
-                        inputSubject.setAttribute('placeholder',"Name");
+                        inputSubject.setAttribute('placeholder',"Subject");
                         inputSubject.setAttribute('required','');
                         
                         const inputArray = [inputName,inputEmail,inputSubject];
