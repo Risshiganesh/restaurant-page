@@ -132,6 +132,7 @@ function createContactElements () {
 
                             const textArea = document.createElement('textarea');
                             textArea.setAttribute('placeholder','Message');
+                            textArea.setAttribute('required','');
                             textAreaDiv.appendChild(textArea);
 
                         const submitButton = document.createElement('button');
