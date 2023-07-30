@@ -273,7 +273,7 @@ html,body {
     row-gap: 30px;
     padding-bottom: 30px;
     /* grid-template-rows: repeat(); */
-    grid-template-columns: minmax(370px,500px);
+    grid-template-columns: minmax(365px,500px);
     align-items: center;
     justify-content: center;
     padding-top: 30px;
