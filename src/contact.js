@@ -11,11 +11,11 @@ function contactFactory (subject,detail,icon,link){
     return{subject,detail,icon,link}
 }
 
-const location = contactFactory("Address:", "No. 54 Jalan Penerbit U1/43 Off Jalan Glenmarie Temasya Industrial Park Batu 3", locationIcon);
+const location = contactFactory("Address", "No. 54 Jalan Penerbit U1/43 Off Jalan Glenmarie Temasya Industrial Park Batu 3", locationIcon);
 
-const phoneNumber = contactFactory("Phone:", "+000000000", phoneIcon);
+const phoneNumber = contactFactory("Phone", "+000000000", phoneIcon);
 
-const email = contactFactory("Email:","email@email.com", emailIcon);
+const email = contactFactory("Email","email@email.com", emailIcon);
 
 const contactArray = [location,phoneNumber,email];
 
