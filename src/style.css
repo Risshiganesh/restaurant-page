@@ -63,7 +63,7 @@ a {
 html,body {
     height: 100%;
     width: 100%;
-    background-color: 	#d9b99b;
+    background-color: 	#d9b99bfa;
 }
 
 #content {
@@ -170,9 +170,6 @@ html,body {
     cursor: pointer;
 }
 
-.nav-btn:active {
-
-}
 
 .nav-btn-clicked {
 
